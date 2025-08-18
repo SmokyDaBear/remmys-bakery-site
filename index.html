@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remmy's Baked Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/e2ce56d5a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <nav>
+          <ul class="unstyled-list" id="navlist">
+            <li class="mobile-only">
+              <div class="flex-column justify-around">
+                <div class="logo-container">
+                  <img src="./assets/remmys-baked-goods-logo-1.png" alt="" />
+                </div>
+                <div class="contacts-container">
+                  <div class="contact"></div>
+                </div>
+              </div>
+            </li>
+            <li><a href="./">Home</a></li>
+            <li class="btn" data-open="about">About</li>
+            <li class="btn" data-open="menu">Menu</li>
+            <li class="btn" data-open="contact">Contact</li>
+            <li>
+              <button class="order-btn btn" data-open="order">Order Now</button>
+            </li>
+          </ul>
+        </nav>
+        <button class="cart-button btn" id="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button class="burger-btn btn" id="menu-button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="fixed-bg flex-column align-center"></div>
+      <div class="container flex-column align-center">
+        <div class="topbar-blank"></div>
+        <div class="logo-container">
+          <img src="./assets/remmys-baked-goods-logo-1.png" alt="" />
+        </div>
+        <div class="contacts-container">
+          <div class="contact"></div>
+        </div>
+      </div>
+      <div class="container color-one flex horizontal-desktop gap-32">
+        <div class="gap-32 flex-column">
+          <h3 class="special-heading">
+            We are located at 123 Sesame St in Tulsa, OK
+          </h3>
+
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                class="gmap_iframe"
+                width="100%"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=660&amp;height=400&amp;hl=en&amp;q=Rose Garden, Woodward Park Dr, Tulsa, OK 74114&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div
+          class="image-container large flex-column margin-auto justify-between align-center gap-32"
+        >
+          <h2 class="special-heading">Come take in the sights and smells</h2>
+          <img src="./assets/baked-goods-1.jpg" alt="" />
+          <p></p>
+        </div>
+      </div>
+      <div class="separator-200px"></div>
+      <div class="container color-two">
+        <h2 class="special-heading">Heres a few of our fan favorite deserts</h2>
+        <div id="slideshow-one" class="flex-grid"></div>
+      </div>
+      <div class="separator-200px"></div>
+      <!--Footer-->
+      <footer>
+        <div
+          class="container full-width horizontal-desktop color-two justify-around"
+        >
+          <div class="flex-column align-center">
+            <div class="logo-container">
+              <img src="./assets/remmys-baked-goods-logo-1.png" alt="" />
+            </div>
+            <div class="contacts-container">
+              <div class="contact"></div>
+            </div>
+          </div>
+          <div class="flex-column align-end gap-32">
+            <h3 class="special-heading">Business Hours</h3>
+            <p>Monday - 6:00am - 6:00pm</p>
+            <p>Tuesday-Thursday - 7:00am - 7:00pm</p>
+            <p>Friday - 7:00am - 8:00pm</p>
+            <p>Saturday - 7:00am - 8:00pm</p>
+            <p>Sunday - 9:00am - 3:00pm</p>
+          </div>
+          <div class="flex-column align-end gap-32">
+            <h3 class="special-heading">More</h3>
+            <p class="btn" data-open="careers">Careers</p>
+          </div>
+        </div>
+      </footer>
+      <!-- modals: -->
+      <!-- Contact -->
+      <div id="contact" class="modal">
+        <div class="color-one container">
+          <h2 class="special-heading">Contact Us</h2>
+          <button class="close-btn btn" data-close="contact">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <form
+            action="POST"
+            class="flex-column container color-two"
+            id="contact-form"
+          >
+            <h4>
+              For any questions or special orders, fill out this form and we
+              will reach out as soon as possible.
+            </h4>
+            <label for="first-name"
+              >First Name <input type="text" name="first-name" id="first-name"
+            /></label>
+
+            <label for="last-name"
+              >Last Name <input type="text" name="last-name" id="last-name"
+            /></label>
+
+            <label for="phone-number"
+              >Phone Number
+              <input type="tel" name="phone-number" id="phone-number"
+            /></label>
+
+            <label for="question-about">What is you question about?</label>
+            <select name="question-about" id="question-about">
+              <option value="" selected>--Please choose an option--</option>
+              <option value="wedding-cakes">Wedding Cakes</option>
+              <option value="catering">Catering</option>
+              <option value=""></option>
+            </select>
+            <button type="submit" class="btn order-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- About -->
+      <div id="about" class="modal">
+        <div class="color-one container flex-column align-center">
+          <h2 class="special-heading">About Us</h2>
+          <button class="close-btn btn" data-close="about">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="card-body">
+            <img src="./assets/remy.jpg" alt="" />
+            <a href="#" class="card-popup-box">
+              <h3>Remmy Linguini</h3>
+              <div>Founder and Head Chef</div></a
+            >
+          </div>
+          <p>
+            Remmy Linguini had a humble beginning in Paris, France, where he
+            learned and mastered the art of baking and cooking. He later moved
+            to the U.S. and began his bakery Remmy's Baked Goods in Tulsa, OK.
+          </p>
+          <p>
+            At Remmy's bakery, we make sure everyone leaves satisfied and
+            smiling.
+          </p>
+          <img src="./assets/kitchen-counter-mid.jpg" alt="" />
+          <img src="./assets/location/food-prep-area.jpeg" alt="" />
+        </div>
+      </div>
+      <!-- Order -->
+      <div id="order" class="modal">
+        <div class="color-one container">
+          <h2 class="special-heading">Menu Items</h2>
+          <button class="close-btn btn" data-close="order">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="menu flex-grid" id="full-menu"></div>
+        </div>
+      </div>
+      <!--Menu-->
+      <div id="menu" class="modal">
+        <div class="color-one container">
+          <h2 class="special-heading">Menu</h2>
+          <button class="close-btn btn" data-close="menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div
+            id="shop-menu"
+            class="container flex-column align-center color-two"
+          >
+            <div class="menu-item"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Careers -->
+      <div id="careers" class="modal">
+        <div class="color-one container">
+          <h2 class="special-heading">Careers</h2>
+          <button class="close-btn btn" data-close="careers">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <!--Cart-->
+      <div id="cart" class="cart-modal">
+        <div class="color-two container flex-column justify-center">
+          <h2 class="text-align-center">Cart</h2>
+          <div class="flex justify-around">
+            <h4>Item</h4>
+            <h4>Item Price</h4>
+            <h4>Quantity</h4>
+            <h4>Total Price</h4>
+          </div>
+          <div class="cart-items-container" id="cart-items"></div>
+          <div class="checkout flex-column justify-between align-center">
+            <h4 id="cart-total"><span>Total - $</span>$0.00</h4>
+            <button class="btn button order-btn" id="checkout-btn">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/slideshow.js"></script>
+  </body>
+</html>
