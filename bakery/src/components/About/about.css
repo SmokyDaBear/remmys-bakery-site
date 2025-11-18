@@ -1,0 +1,24 @@
+.about-section p {
+  margin-bottom: 1rem;
+  color: var(--color-one);
+  line-height: 1.6;
+}
+.about-section img {
+  width: max-content;
+  max-width: 95%;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  margin: 1.5rem auto;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid var(--opacity-20);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  max-width: 300px;
+  margin: 1rem auto;
+}
