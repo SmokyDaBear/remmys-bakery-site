@@ -70,12 +70,19 @@ footer .grid-section:first-child {
   }
 }
 @media (max-width: 600px) {
+  footer {
+    padding: 1rem;
+  }
   footer .footer-grid {
     grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
   }
   footer .grid-section {
     text-align: center;
     border-left: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0 auto;
   }
 }
