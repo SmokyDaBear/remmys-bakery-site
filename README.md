@@ -1,6 +1,7 @@
 # Bakery Website
 
 This is a simple bakery website built with React and TypeScript.
+View the live demo [here](https://smokydabear.github.io/remmys-bakery-site/)
 
 ## Features
 
