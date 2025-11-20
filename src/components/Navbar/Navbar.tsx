@@ -22,21 +22,46 @@ export default function Navbar({
       </button>
       <ul id="navlist" className={`navlist ${open ? "active" : ""}`}>
         <li>
-          <a onClick={() => onNavClick("home")}>Gallery</a>
+          <a
+            onClick={() => {
+              onNavClick("home");
+              setOpen(false);
+            }}
+          >
+            Gallery
+          </a>
         </li>
         <li>
-          <a href="#menu" onClick={() => onNavClick("menu")}>
+          <a
+            href="#menu"
+            onClick={() => {
+              onNavClick("menu");
+              setOpen(false);
+            }}
+          >
             Menu
           </a>
         </li>
 
         <li>
-          <a href="#contact" onClick={() => onNavClick("contact")}>
+          <a
+            href="#contact"
+            onClick={() => {
+              onNavClick("contact");
+              setOpen(false);
+            }}
+          >
             Contact
           </a>
         </li>
         <li>
-          <a href="#about" onClick={() => onNavClick("about")}>
+          <a
+            href="#about"
+            onClick={() => {
+              onNavClick("about");
+              setOpen(false);
+            }}
+          >
             About
           </a>
         </li>

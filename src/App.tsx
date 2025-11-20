@@ -42,7 +42,7 @@ function App() {
       <main>
         {currentSection === "home" && (
           <>
-            <Hero />
+            <Hero goToMenu={() => setCurrentSection("menu")} />
             <section id="gallery">
               <h2>Featured Desserts</h2>
               <p className="sub-heading">

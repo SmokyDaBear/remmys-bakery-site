@@ -1,7 +1,7 @@
 import heroBg from "../../assets/kneading-bw.jpg";
 import logo from "../../assets/remmys-baked-goods-logo-1.png";
 import "./hero.css";
-export default function Hero() {
+export default function Hero({ goToMenu }: { goToMenu: () => void }) {
   return (
     <section className="hero">
       <img src={heroBg} alt="" aria-hidden className="hero-bg" />
@@ -15,7 +15,7 @@ export default function Hero() {
         <h1 className="hero-title cursive">Remmy's Baked Goods</h1>
         <p className="hero-subtitle">Fresh, local, and made with love.</p>
         <div className="hero-actions">
-          <a href="#menu" className="btn pill-btn">
+          <a href="#menu" className="btn pill-btn" onClick={() => goToMenu()}>
             Order Now
           </a>
           <a href="#gallery" className="btn">
