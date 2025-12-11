@@ -24,6 +24,11 @@
   box-shadow: var(--shadow-lg);
   padding: 2rem;
 }
+@media (max-width: 768px) {
+  .checkout-content {
+    padding: 0.5rem;
+  }
+}
 
 .checkout-content h2 {
   margin-bottom: 1.5rem;
@@ -118,12 +123,14 @@
 
 .checkout-promo {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 2rem;
   background: linear-gradient(135deg, var(--bg-dark) 0%, rgb(101, 67, 33) 100%);
   border-radius: var(--border-radius-xl);
   color: white;
   align-items: center;
+  justify-content: center;
 }
 
 .promo-icon {

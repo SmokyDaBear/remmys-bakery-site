@@ -41,3 +41,10 @@
   gap: 12px;
   margin-top: 8px;
 }
+.hero-actions .btn {
+  background-color: var(--color-accent);
+  color: var(--opacity-text);
+}
+.hero-actions .btn:hover {
+  background-color: var(--color-accent-dark);
+}

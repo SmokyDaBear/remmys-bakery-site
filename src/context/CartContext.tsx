@@ -29,6 +29,24 @@ function reducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case "ADD_ITEM": {
       const { menuItem, quantity } = action.payload;
+      const existingIndex = state.items.findIndex(
+        (item) => item.title === menuItem.title
+      );
+      if (existingIndex !== -1) {
+        const next = state.items.map((item, index) =>
+          index === existingIndex
+            ? {
+                ...item,
+                quantity: item.quantity + quantity,
+                totalPrice: getTotalItemPrice(
+                  item.price,
+                  item.quantity + quantity
+                ),
+              }
+            : item
+        );
+        return { ...state, items: next };
+      }
       const item: CartItem = {
         title: menuItem.title,
         description: menuItem.description,

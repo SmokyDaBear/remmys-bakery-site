@@ -102,9 +102,15 @@ function App() {
           </section>
         )}
         {showCart && (
-          <aside id="cart" className="active">
-            <CartView onCheckout={handleCheckout} />
-          </aside>
+          <div className="cart-overlay" onClick={() => setShowCart(false)}>
+            <aside
+              id="cart"
+              className="active"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <CartView onCheckout={handleCheckout} />
+            </aside>
+          </div>
         )}
       </main>
       <Footer onNavClick={(section) => setCurrentSection(section)} />
